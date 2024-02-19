@@ -1,14 +1,14 @@
 public class CreditPaymentService {
 
     // S — сумма кредита, P — процентная ставка, N — месяцы выплат, K — коэффициент аннуитета
-    public int calculate(int S, double P, int N) {
+    public int calculate(int loanSum, double percent, int months) {
 
-        double K = (Math.pow(P * ((1 + P)), (N * 12)) / ((Math.pow((1 + P), N * 12) - 1)));
-        double annuity = S * K;
+        double rate = (Math.pow(percent * ((1 + percent)), (months * 12)) / ((Math.pow((1 + percent), months * 12) - 1)));
+        double annuity = loanSum * rate;
 
         return (int) annuity;
     }
-    }
+}
 
 /*
 

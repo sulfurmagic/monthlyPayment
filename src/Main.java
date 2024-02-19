@@ -3,11 +3,11 @@ public class Main {
 
         CreditPaymentService service = new CreditPaymentService();
 
-        int S = 1_000_000;
-        double P = 9.99;
-        int N = 12;
+        int loanSum = 1_000_000;
+        double percent = 9.99;
+        int months = 12;
 
-        int annuity = service.calculate(S, P, N);
+        int annuity = service.calculate(loanSum, percent, months);
 
         System.out.println("Ежемесячный платеж = " + annuity + " рублей");
 

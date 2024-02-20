@@ -5,7 +5,7 @@ public class Main {
 
         int loanSum = 1_000_000;
         double percent = 9.99;
-        int months = 12;
+        int months = 36;
 
         int annuity = service.calculate(loanSum, percent, months);
 
